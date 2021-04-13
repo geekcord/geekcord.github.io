@@ -138,7 +138,7 @@ form .serverInfo p .name {
 .acceptBtn {
   width: 100%;
   box-sizing: border-box;
-  background: #7289DA;
+  background: #7289da;
   border: none;
   color: #fff;
   padding: 15px 0;
@@ -148,11 +148,13 @@ form .serverInfo p .name {
   left: 0;
   cursor: pointer;
   transition: 0.2s ease;
+  text-decoration: none;
 }
 .acceptBtn:hover {
-  background: #6B7FC5;
+  background: #6b7fc5;
+  text-decoration: none;
 }
- 
+
 .container {
   height: 100%;
   display: flex;
