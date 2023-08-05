@@ -14,7 +14,7 @@
 	];
 </script>
 
-<div class="bg-[#1e1f22] h-full">
+<div class="bg-[#1e1f22] h-full hide-in-menu" >
 	<div class="server-badge hover:bg-[#5865f2]">
 		<svg
 			class="text-[#fff]"

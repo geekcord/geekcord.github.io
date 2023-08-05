@@ -1,6 +1,7 @@
-<div class="bg-[#2b2d31] h-full w-60">
+<div class="bg-[#2b2d31] h-full w-full md:w-60 hide-in-menu">
     <div class="shadow-lg p-4 mb-11">
-        <h1 class="text-[#f0f1f3] font-semibold ">GeekCord  😎💻</h1>
+        <h1 class="text-[#f0f1f3] font-semibold inline ">GeekCord  😎💻</h1>
+        
     </div>
 
     <div class="channel-catagory">
