@@ -15,6 +15,17 @@
 
 }
 
+
+.server-badge-tooltip {
+    @apply scale-0 rounded-md bg-gray-900 text-white absolute w-auto p-2 m-2 min-w-max left-20 shadow-sm text-xs font-semibold transition-all ;
+    animation-duration: 10;
+}
+
+.server-badge-tooltip::before {
+    content: '';
+    @apply absolute w-0 h-0 border-8 -left-3 border-transparent border-r-gray-900;
+}
+
 @keyframes border-radius-transition {
 0% {border-radius: 20px; }
 50% {border-radius: 15px;}
