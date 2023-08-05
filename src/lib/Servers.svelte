@@ -34,8 +34,8 @@
 
 	{#each servers as server}
 		<div
-			class="server-badge group"
-			style="background-image: url({server.icon}); background-size: cover; background-color: {server.color};"
+			class="server-badge { server.tooltip_name == 'GeekCord  😎💻'  ? '' : 'group'}"
+			style="background-image: url({server.icon}); background-size: cover; background-color: {server.color}; { server.tooltip_name == 'GeekCord  😎💻'  ? 'border-radius: 10px; animation: none;' : ''}"
 		>
 			<div class="server-badge-tooltip group-hover:scale-100">{server.tooltip_name}</div>
 		</div>
