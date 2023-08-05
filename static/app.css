@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.server-badge {
+    @apply z-10 w-12 h-12 rounded-full m-3 justify-center content-start flex items-center bg-[#313338] cursor-pointer transition-all ease-in-out;
+
+}
+
+.server-badge:hover {
+    
+    animation: border-radius-transition .1s ease-in-out;
+    border-radius: 10px;
+    
+
+}
+
+@keyframes border-radius-transition {
+0% {border-radius: 20px; }
+50% {border-radius: 15px;}
+100% {border-radius: 10px;}
+}
