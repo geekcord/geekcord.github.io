@@ -26,6 +26,35 @@
     @apply absolute w-0 h-0 border-8 -left-3 border-transparent border-r-gray-900;
 }
 
+
+.channel-active {
+    @apply
+        text-white
+        bg-[rgba(255,255,255,0.1)]
+        m-2
+        rounded-md;
+}
+
+.channel-hashtag {
+    @apply
+        ml-2  
+        inline 
+        text-[#80848E];
+}
+
+.channel-catagory {
+    @apply
+        text-[#949BA4]
+        font-bold;
+    font-size: 0.56rem;
+}
+
+.channel-catagory::before {
+    content: '>';
+    font-family: monospace;
+    @apply ml-1 mr-2;
+}
+
 @keyframes border-radius-transition {
 0% {border-radius: 20px; }
 50% {border-radius: 15px;}
