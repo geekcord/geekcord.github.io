@@ -53,6 +53,7 @@ declare module '$env/static/private' {
 	export const JAVA_HOME: string;
 	export const LANG: string;
 	export const LOCALAPPDATA: string;
+	export const LOCAL_GIT_DIRECTORY: string;
 	export const LOGONSERVER: string;
 	export const MSBuildSDKsPath: string;
 	export const nim: string;
@@ -174,6 +175,7 @@ declare module '$env/dynamic/private' {
 		JAVA_HOME: string;
 		LANG: string;
 		LOCALAPPDATA: string;
+		LOCAL_GIT_DIRECTORY: string;
 		LOGONSERVER: string;
 		MSBuildSDKsPath: string;
 		nim: string;
