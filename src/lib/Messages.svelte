@@ -36,7 +36,7 @@
             <div class="ml-3 mt-10 space-y-5 overflow-y-auto">
                 {#each messages as message}
                     
-                <div class="flex flex-row overflow-y-auto">
+                <div class="flex flex-row overflow-y-auto hover:bg-[#303237]">
                     <div>
                         <img src="/img/user_{message.username.toLowerCase()}.png" 
                         class="rounded-full"
