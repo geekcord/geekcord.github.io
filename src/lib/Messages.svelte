@@ -70,5 +70,11 @@
             {/each}
 
 
+
+            <form class="absolute bottom-0">
+                <input type="text" name="text" id="inp">
+            </form>
+
+
     </div>
 </div>
