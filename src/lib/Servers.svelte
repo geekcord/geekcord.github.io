@@ -1,15 +1,18 @@
 <script lang="ts">
+
 	let servers = [
 		{
 			icon: '/img/icon.webp',
 			color: 'bg-cyan-500',
-			tooltip_name: 'GeekCord  😎💻'
+			tooltip_name: 'GeekCord  😎💻',
+			redirect: undefined
 		},
 
 		{
 			icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
 			color: 'white',
-			tooltip_name: 'Github'
+			tooltip_name: 'Github',
+			redirect: 'https://github.com/geekcord'
 		}
 	];
 </script>
@@ -33,7 +36,10 @@
 	<hr class="mx-6 h-[0.1rem] bg-[#313338] border-none rounded-sm" />
 
 	{#each servers as server}
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div
+			on:click={() => {if (server.redirect) window.open(server.redirect)}}
 			class="server-badge { server.tooltip_name == 'GeekCord  😎💻'  ? '' : 'group'}"
 			style="background-image: url({server.icon}); background-size: cover; background-color: {server.color}; { server.tooltip_name == 'GeekCord  😎💻'  ? 'border-radius: 10px; animation: none;' : ''}"
 		>
