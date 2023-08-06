@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "deploy": "gh-pages -d build -t true"
+  }
+}
