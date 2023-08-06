@@ -3,13 +3,18 @@
 	import Messages from '$lib/Messages.svelte';
 	import Servers from '$lib/Servers.svelte';
 	import { onMount } from 'svelte';
+
 </script>
 
 <!-- svelte-ignore a11y-interactive-supports-focus -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <span
+    id="nav-toggle"
 	on:click={() =>
-		document.querySelectorAll('.hide-in-menu').forEach((el) => el.classList.toggle('hidden'))}
+		document.querySelectorAll('.hide-in-menu').forEach((el) =>{ 
+            el.classList.toggle('hidden') 
+            el.classList.toggle('flex')
+        })}
 	class="text-white inline top-3 md:hidden absolute right-5"
 	role="button"
 >
