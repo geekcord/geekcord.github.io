@@ -14,16 +14,13 @@
     ]
 
     function addMessage(message: string) {
-        messages = [...messages, {
-            username: 'Geek',
-            message,
-            invite: false
-        }]
+        // we dont need this :P
+        return 0
     }
 </script>
 
 
-<div class="h-full bg-[#313338] flex-1 hidden hide-in-menu md:min-h-[100vh] flex-col">
+<div class="h-full bg-[#313338] flex-1 hidden lg:block xl:block hide-in-menu md:min-h-[100vh] flex-col">
     <div>
         <div class="shadow-lg p-4 mb-11">
             <h1 class="text-[#f0f1f3] font-semibold">
