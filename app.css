@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.server-badge {
+    @apply z-10 w-12 h-12 rounded-full m-3 justify-center content-start flex items-center bg-[#313338] cursor-pointer transition-all ease-in-out;
+
+}
+
+.server-badge:hover {
+    
+    animation: border-radius-transition .1s ease-in-out;
+    border-radius: 10px;
+    
+
+}
+
+
+.server-badge-tooltip {
+    @apply scale-0 rounded-md bg-gray-900 text-white absolute w-auto p-2 m-2 min-w-max left-20 shadow-sm text-xs font-semibold transition-all ;
+    animation-duration: 10;
+}
+
+.server-badge-tooltip::before {
+    content: '';
+    @apply absolute w-0 h-0 border-8 -left-3 border-transparent border-r-gray-900;
+}
+
+
+.channel-active {
+    @apply
+        text-white
+        bg-[rgba(255,255,255,0.1)]
+        m-2
+        p-1
+        rounded-md;
+}
+
+.channel-hashtag {
+    @apply
+        ml-2  
+        inline 
+        text-[#80848E];
+}
+
+.channel-catagory {
+    @apply
+        text-[#949BA4]
+        font-bold;
+    font-size: 0.56rem;
+}
+
+.channel-catagory::before {
+    content: '>';
+    font-family: monospace;
+    @apply ml-1 mr-2;
+}
+
+@keyframes border-radius-transition {
+0% {border-radius: 20px; }
+50% {border-radius: 15px;}
+100% {border-radius: 10px;}
+}
