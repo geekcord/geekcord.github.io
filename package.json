@@ -5,6 +5,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -21,6 +23,7 @@
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.30.0",
+		"gh-pages": "^6.1.0",
 		"postcss": "^8.4.27",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.10.1",
