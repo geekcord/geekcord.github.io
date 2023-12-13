@@ -1,4 +1,8 @@
 <script lang="ts">
+	import { afterUpdate, onMount } from "svelte";
+
+
+    $: bottomPosition = 0
     let messages = [
         {
             username: 'Geek',
@@ -17,6 +21,19 @@
         // we dont need this :P
         return 0
     }
+
+    function calculateBottom() {
+        bottomPosition = window.innerHeight - 275
+    }
+
+    onMount(() => {
+        calculateBottom()
+        
+        window.addEventListener("resize", () => {
+            calculateBottom()
+        })
+    })
+
 </script>
 
 
@@ -30,7 +47,7 @@
     </div>
 
     <div class="flex-1 overflow-y-auto">
-            <div class="ml-3 mt-10 space-y-5 overflow-y-auto">
+            <div class="ml-3 mt-10 space-y-5 overflow-y-auto" style="height: {bottomPosition}px">
                 {#each messages as message}
                     
                 <div class="flex flex-row overflow-y-auto hover:bg-[#303237]">
@@ -81,7 +98,7 @@
     </div>
 
     <div class="m-3 mb-5">
-        <form class="w-full" on:submit={() => addMessage(document.getElementById('inp')?.value.trim())}>
+        <form class="w-full"  on:submit={() => addMessage(document.getElementById('inp')?.value.trim())}>
             <input class="rounded-md w-full text-white p-3 bg-[#383A40] ring-0 border-0" 
             placeholder="Message #💬・general. (Enter to send)"
             autocomplete="off" type="text" name="text" id="inp" />
